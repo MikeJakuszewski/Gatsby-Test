@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from "gatsby";
 export interface Title {
   data: {
     site: {
-      siteMetaData: {
+      siteMetadata: {
         title: string;
       };
     };

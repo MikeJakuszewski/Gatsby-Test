@@ -2,7 +2,8 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
-import { Title } from "../customHooks/useSiteMetadata";
+import useSiteMetadata, { Title } from "../customHooks/useSiteMetadata";
+import { log } from "console";
 
 interface DataStructure {
   data: {
@@ -25,15 +26,22 @@ const BlogPage = ({ data }: DataStructure) => {
 };
 
 export const query = graphql`
-  query {
+  {
     allFile(filter: { sourceInstanceName: { eq: "blog" } }) {
       nodes {
         name
       }
     }
+    site {
+      siteMetadata {
+        title
+      }
+    }
   }
 `;
 
-export const Head = () => <Seo title="My Blog Posts" />;
+export const Head = ({ data }: Title) => (
+  <Seo title={data.site.siteMetadata.title} />
+);
 
 export default BlogPage;
