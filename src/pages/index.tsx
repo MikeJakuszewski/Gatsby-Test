@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link, type HeadFC, type PageProps } from "gatsby";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
 
 const IndexPage: React.FC<PageProps> = () => {
