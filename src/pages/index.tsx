@@ -1,7 +1,8 @@
 import * as React from "react";
 import { Link, type HeadFC, type PageProps } from "gatsby";
-import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
+import Layout from "../components/Layout";
+import Seo from "../components/Seo";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -23,4 +24,4 @@ const IndexPage: React.FC<PageProps> = () => {
 };
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Gatsby - Home Page</title>;
+export const Head: HeadFC = () => <Seo title="Home Page" />;

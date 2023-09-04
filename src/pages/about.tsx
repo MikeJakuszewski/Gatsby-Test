@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import Layout from "../components/Layout";
+import Seo from "../components/Seo";
 
 const About = () => {
   return (
@@ -16,6 +17,6 @@ const About = () => {
   );
 };
 
-export const Head: HeadFC = () => <title>Gatsby - About</title>;
+export const Head: HeadFC = () => <Seo title="About Me" />;
 
 export default About;

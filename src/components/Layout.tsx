@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
+import useSiteMetadata from "../customHooks/useSiteMetadata";
 import "../pages/styles.scss";
 
 interface Props {
@@ -8,8 +9,11 @@ interface Props {
 }
 
 const Layout = ({ pageTitle, children }: Props) => {
+  const data = useSiteMetadata();
+
   return (
     <div className="test">
+      <header className="site-title">{data.title}</header>
       <nav>
         <ul className="nav-links ">
           <li className="nav-link-item">
@@ -20,6 +24,11 @@ const Layout = ({ pageTitle, children }: Props) => {
           <li className="nav-link-item">
             <Link to="/about" className="nav-link-text">
               About
+            </Link>
+          </li>
+          <li className="nav-link-item">
+            <Link to="/blog" className="nav-link-text">
+              Blog
             </Link>
           </li>
         </ul>
