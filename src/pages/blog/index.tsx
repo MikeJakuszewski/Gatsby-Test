@@ -26,7 +26,7 @@ const BlogPage = ({ data }: DataStructure) => {
 };
 
 export const query = graphql`
-  {
+  query {
     allMdx(sort: { frontmatter: { date: DESC } }) {
       nodes {
         frontmatter {
