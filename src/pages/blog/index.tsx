@@ -6,8 +6,6 @@ import { Title } from "../../interfaces/interface";
 import { DataStructure } from "../../interfaces/interface";
 
 const BlogPage = ({ data }: DataStructure) => {
-  console.log(data);
-
   return (
     <Layout pageTitle="My Blog Posts">
       <ul>
