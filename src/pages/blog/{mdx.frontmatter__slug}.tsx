@@ -6,9 +6,8 @@ import Layout from "../../components/Layout";
 import Seo from "../../components/Seo";
 
 const BlogPost = ({ data, children }: BlogSlugProps) => {
-  console.log(children);
-
   const image = getImage(data.mdx.frontmatter.hero_image);
+  console.log(image);
 
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
@@ -26,8 +25,8 @@ const BlogPost = ({ data, children }: BlogSlugProps) => {
 };
 
 export const query = graphql`
-  query {
-    mdx {
+  query ($id: String) {
+    mdx(id: { eq: $id }) {
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")

@@ -1,9 +1,9 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import Layout from "../components/Layout";
-import Seo from "../components/Seo";
+import Layout from "../../components/Layout";
+import Seo from "../../components/Seo";
 
-const About = () => {
+const About: React.FC<PageProps> = () => {
   return (
     <main>
       <Layout pageTitle="About Page">
