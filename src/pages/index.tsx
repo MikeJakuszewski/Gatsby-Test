@@ -9,14 +9,15 @@ const IndexPage: React.FC<PageProps> = () => {
     <main>
       <Layout pageTitle="Home Page">
         <h4>Welcome to my Gatsby site!</h4>
-        <StaticImage
-          src="https://pbs.twimg.com/media/E1oMV3QVgAIr1NT?format=jpg&name=large"
-          alt="Clifford"
-        />
+        <div className="image-container">
+          <StaticImage
+            class="img"
+            src="../assets/Howells.jpeg"
+            alt="Couple with Dog"
+          />
 
-        <Link to="https://www.google.com">
-          <StaticImage src="../assets/Bills.png" alt="Bills" />
-        </Link>
+          <StaticImage class="img" src="../assets/Bills.png" alt="Bills" />
+        </div>
       </Layout>
     </main>
   );

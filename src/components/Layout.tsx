@@ -13,26 +13,29 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
 
   return (
     <div className="test">
-      <header className="site-title">{data.title}</header>
-      <nav>
-        <ul className="nav-links ">
-          <li className="nav-link-item">
-            <Link to="/" className="nav-link-text">
-              Home
-            </Link>
-          </li>
-          <li className="nav-link-item">
-            <Link to="/about" className="nav-link-text">
-              About
-            </Link>
-          </li>
-          <li className="nav-link-item">
-            <Link to="/blog" className="nav-link-text">
-              Blog
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      <div className="top">
+        <header className="site-title">{data.title}</header>
+        <nav>
+          <ul className="nav-links ">
+            <li className="nav-link-item">
+              <Link to="/" className="nav-link-text">
+                Home
+              </Link>
+            </li>
+            <li className="nav-link-item">
+              <Link to="/about" className="nav-link-text">
+                About
+              </Link>
+            </li>
+            <li className="nav-link-item">
+              <Link to="/blog" className="nav-link-text">
+                Blog
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
       <main>
         <h1 className="heading">{pageTitle}</h1>
         {children}
