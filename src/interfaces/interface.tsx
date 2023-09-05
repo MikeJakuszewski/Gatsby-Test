@@ -13,9 +13,18 @@ export interface DataStructure {
     allMdx: {
       nodes: Array<{
         excerpt: string;
-        frontmatter: { date: string; title: string };
+        frontmatter: { date: string; title: string; slug: string };
         id: string;
       }>;
     };
   };
+}
+
+export interface BlogSlugProps {
+  data: {
+    mdx: {
+      frontmatter: { date?: string; title: string };
+    };
+  };
+  children: React.ReactNode;
 }

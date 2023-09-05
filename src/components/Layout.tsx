@@ -3,12 +3,12 @@ import { Link, useStaticQuery, graphql } from "gatsby";
 import useSiteMetadata from "../customHooks/useSiteMetadata";
 import "../pages/styles.scss";
 
-interface Props {
+interface LayoutProps {
   pageTitle: string;
   children: React.ReactNode;
 }
 
-const Layout = ({ pageTitle, children }: Props) => {
+const Layout = ({ pageTitle, children }: LayoutProps) => {
   const data = useSiteMetadata();
 
   return (
