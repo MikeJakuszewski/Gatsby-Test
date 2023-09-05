@@ -27,3 +27,9 @@ const config: GatsbyConfig = {
 };
 
 export default config;
+
+module.exports = {
+  flags: {
+    PARALLEL_QUERY_RUNNING: true,
+  },
+};
