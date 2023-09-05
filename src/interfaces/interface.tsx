@@ -24,7 +24,7 @@ export interface BlogSlugProps {
   data: {
     mdx: {
       frontmatter: {
-        date?: string;
+        date: string;
         title: string;
         hero_image_alt: string;
         hero_image_credit_link: string;
